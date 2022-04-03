@@ -17,9 +17,6 @@ public class Director {
 
     public House operate()
     {
-        builder.buildFloor();
-        builder.buildWalls();
-        builder.buildRoof();
-        return builder.getHouse();
+        return builder.buildFloor().buildWalls().buildRoof().getHouse();
     }
 }

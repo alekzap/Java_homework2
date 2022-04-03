@@ -8,11 +8,11 @@ public abstract class AbstractHouseBuilder {
         this.materialFactory = materialFactory;
     }
 
-    public abstract void buildWalls();
+    public abstract AbstractHouseBuilder buildWalls();
 
-    public abstract void buildFloor();
+    public abstract AbstractHouseBuilder buildFloor();
 
-    public abstract void buildRoof();
+    public abstract AbstractHouseBuilder buildRoof();
 
     public House getHouse() {
         return house;

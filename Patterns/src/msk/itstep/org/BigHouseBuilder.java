@@ -10,7 +10,7 @@ public class BigHouseBuilder extends AbstractHouseBuilder {
     }
 
     @Override
-    public void buildWalls() {
+    public AbstractHouseBuilder buildWalls() {
         System.out.println(this.toString() + " uses many " + materialFactory.createWallsMaterial().toString()
                 + " to build walls");
 
@@ -18,10 +18,12 @@ public class BigHouseBuilder extends AbstractHouseBuilder {
             house.addWallsMaterial(materialFactory.createWallsMaterial());
 
         System.out.println(house);
+
+        return this;
     }
 
     @Override
-    public void buildFloor() {
+    public AbstractHouseBuilder buildFloor() {
         System.out.println(this.toString() + " uses many " + materialFactory.createFloorMaterial().toString()
                 + " to build floor");
 
@@ -29,10 +31,11 @@ public class BigHouseBuilder extends AbstractHouseBuilder {
             house.addFloorMaterial(materialFactory.createFloorMaterial());
 
         System.out.println(house);
+        return this;
     }
 
     @Override
-    public void buildRoof() {
+    public AbstractHouseBuilder buildRoof() {
         System.out.println(this.toString() + " uses a lot of " + materialFactory.createRoofMaterial().toString()
                 + " to build roof");
 
@@ -40,6 +43,7 @@ public class BigHouseBuilder extends AbstractHouseBuilder {
             house.addRoofMaterial(materialFactory.createRoofMaterial());
 
         System.out.println(house);
+        return this;
     }
 
     @Override
